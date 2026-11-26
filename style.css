@@ -1,0 +1,605 @@
+/* BASIC RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101116;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 245px;
+    background: #181a21;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #30313a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 55px;
+}
+
+.logo-icon {
+    background: #e52b35;
+    padding: 10px;
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logo h2 {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.logo small {
+    color: #999;
+    font-size: 9px;
+}
+
+.menu-heading {
+    color: #777;
+    font-size: 11px;
+    margin-bottom: 18px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-link {
+    color: #aaa;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: #302126;
+    color: #ff4a52;
+}
+
+.team-card {
+    background: #242630;
+    padding: 17px;
+    border-radius: 8px;
+    margin-top: auto;
+}
+
+.team-card small {
+    color: #999;
+    font-size: 10px;
+}
+
+.team-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.team-card p {
+    color: #999;
+    font-size: 12px;
+}
+
+.sidebar-footer {
+    margin-top: 25px;
+    color: #aaa;
+    font-size: 10px;
+}
+
+
+/* COMMON ELEMENTS */
+
+.online-dot {
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #20cf80;
+    margin-right: 6px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.eyebrow {
+    color: #e52b35;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    font-size: 30px;
+}
+
+.race-status {
+    background: #202a27;
+    color: #20cf80;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+
+/* RACE INFORMATION */
+
+.race-info {
+    background: linear-gradient(110deg, #302027, #1c1d25);
+    border: 1px solid #493037;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.race-info small,
+.stat-card small,
+.panel small {
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.race-info h2 {
+    margin: 9px 0;
+    font-size: 19px;
+}
+
+.race-info p {
+    color: #aaa;
+    font-size: 12px;
+}
+
+.race-lap h2 span {
+    color: #999;
+}
+
+
+/* STATISTICS */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: #1c1e26;
+    border: 1px solid #30313a;
+    padding: 20px;
+    border-radius: 9px;
+}
+
+.stat-card h2 {
+    font-size: 25px;
+    margin: 15px 0 8px;
+}
+
+.stat-card p {
+    font-size: 11px;
+    color: #999;
+}
+
+.stat-card .positive {
+    color: #20cf80;
+}
+
+.stat-card .medium-text {
+    color: #ffd45c;
+}
+
+
+/* CONTENT PANELS */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.panel {
+    background: #1c1e26;
+    border: 1px solid #30313a;
+    padding: 22px;
+    border-radius: 9px;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-heading h2 {
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.live-label {
+    color: #20cf80;
+    font-size: 11px;
+}
+
+
+/* TRACK */
+
+.track {
+    margin-top: 20px;
+    background: #171920;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.track svg {
+    width: 100%;
+}
+
+.track-caption {
+    text-align: center;
+    color: #888;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+
+/* DRIVER */
+
+.driver-number {
+    font-size: 65px;
+    font-weight: bold;
+    color: #e52b35;
+    margin-top: 22px;
+    font-style: italic;
+}
+
+.driver-panel > h2 {
+    font-size: 21px;
+}
+
+.driver-team {
+    color: #999;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+.driver-details {
+    display: flex;
+    gap: 45px;
+    margin-top: 25px;
+}
+
+.driver-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.driver-details small {
+    color: #999;
+    font-size: 10px;
+}
+
+.driver-details strong {
+    font-size: 17px;
+}
+
+
+/* STRATEGY */
+
+.strategy-panel {
+    margin-bottom: 25px;
+}
+
+.strategy-tag {
+    color: #20cf80;
+    background: #202a27;
+    padding: 7px 12px;
+    font-size: 10px;
+    border-radius: 4px;
+}
+
+.strategy-options {
+    display: flex;
+    gap: 45px;
+    margin: 25px 0;
+}
+
+.strategy-options div {
+    display: grid;
+    grid-template-columns: 22px auto;
+    gap: 5px 9px;
+    align-items: center;
+}
+
+.strategy-options small {
+    grid-column: 2;
+    font-size: 10px;
+}
+
+.tyre {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 4px solid;
+    grid-row: span 2;
+}
+
+.soft {
+    border-color: #ed3944;
+}
+
+.medium {
+    border-color: #ffd45c;
+}
+
+.hard {
+    border-color: #ddd;
+}
+
+.strategy-options strong {
+    font-size: 12px;
+}
+
+.pit-button {
+    background: #e52b35;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pit-button:hover {
+    background: #bd1c27;
+}
+
+footer {
+    text-align: center;
+    color: #666;
+    font-size: 10px;
+    padding: 15px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 190px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .team-card {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .race-info {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .strategy-options {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* TYRE WEAR PROGRESS BAR */
+
+.wear-bar {
+    width: 100%;
+    height: 8px;
+    background: #2c2f3b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 8px;
+}
+
+#wearFill {
+    width: 0%;
+    height: 100%;
+    background: #20cf80;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+
+/* STRATEGY ACTION BUTTONS */
+
+.strategy-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.next-lap-button {
+    background: #20cf80;
+    color: #101116;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.next-lap-button:hover {
+    background: #1ab36e;
+}
+
+.next-lap-button:disabled {
+    background: #3a3d4a;
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* CLICKABLE TYRE SELECTION */
+
+.tyre-option {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tyre-option:hover {
+    background: #242630;
+}
+
+.tyre-option.selected {
+    background: #282a36;
+    border-color: #e52b35;
+}
+
+.soft-text {
+    color: #ed3944;
+}
+
+.hard-text {
+    color: #dddddd;
+}
+
+
+/* WARNING & CRITICAL ALERT EFFECTS */
+
+.status-warning {
+    color: #ffd45c !important;
+    font-weight: bold;
+}
+
+.status-critical {
+    color: #e52b35 !important;
+    font-weight: bold;
+}
+
+.race-status.critical-alert {
+    background: #3b181c;
+    color: #ff4a52;
+    border: 1px solid #e52b35;
+    animation: pulseAlert 1s infinite;
+}
+
+.race-status.critical-alert .online-dot {
+    background: #e52b35;
+}
+
+@keyframes pulseAlert {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+
+/* ONE-STOP VS TWO-STOP COMPARISON */
+
+.strategy-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.plan-card {
+    background: #171920;
+    border: 1px solid #30313a;
+    padding: 15px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.plan-card.active-plan {
+    border-color: #20cf80;
+    background: #1a2422;
+}
+
+.plan-card strong {
+    font-size: 13px;
+    color: #fff;
+}
+
+.plan-card p {
+    font-size: 11px;
+    color: #aaa;
+}
+
+@media (max-width: 600px) {
+    .strategy-comparison {
+        grid-template-columns: 1fr;
+    }
+}
