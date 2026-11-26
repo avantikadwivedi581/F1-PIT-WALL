@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>F1 PIT WALL | Race Control</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <span class="logo-icon">F1</span>
+                <div>
+                    <h2>PIT WALL</h2>
+                    <small>RACE ENGINEERING</small>
+                </div>
+            </div>
+
+            <p class="menu-heading">MAIN MENU</p>
+
+            <nav>
+                <a href="#overview" class="nav-link active">◈ Race Control</a>
+                <a href="#strategy" class="nav-link">◉ Tyre Strategy</a>
+                <a href="#telemetry" class="nav-link">⌁ Telemetry</a>
+                <a href="#results" class="nav-link">▤ Race Results</a>
+            </nav>
+
+            <div class="team-card">
+                <small>YOUR TEAM</small>
+                <h3>VERSTAPPEN RACING</h3>
+                <p>Season 2026</p>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="online-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">FORMULA RACING SIMULATOR</p>
+                    <h1>Race Control</h1>
+                </div>
+
+                <div class="race-status">
+                    <span class="online-dot"></span>
+                    SIMULATION READY
+                </div>
+
+            </header>
+
+
+            <!-- RACE INFORMATION -->
+            <section class="race-info" id="overview">
+
+                <div>
+                    <small>GRAND PRIX</small>
+                    <h2>MONACO GRAND PRIX</h2>
+                    <p>Monte Carlo · Circuit de Monaco</p>
+                </div>
+
+                
+                <div class="race-lap">
+                     <small>RACE PROGRESS</small>
+                     <h2 id="lapValue">01 <span>/ 50</span></h2>
+                </div>
+
+                <div>
+                    <small>TRACK CONDITION</small>
+                    <h2>DRY</h2>
+                    <p>Track temperature: 34°C</p>
+                </div>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+                    <small>DRIVER POSITION</small>
+                    <h2>P1</h2>
+                    <p class="positive">LEADING</p>
+                </div>
+                 <div class="stat-card">
+                 <small>BEST LAP</small>
+                 <h2 id="bestLapValue">1:14.320</h2>
+                 <p id="lapPaceNote">Last lap: 1:14.320</p>
+                </div>              
+                                   
+                                           
+                                           
+                <div class="stat-card">
+                 <small>CURRENT TYRE</small>
+                <h2 id="tyreValue">MEDIUM</h2>
+                <p class="medium-text" id="tyreSubtext">M · COMPOUND</p>
+                     </div>
+                <div class="stat-card">
+                 <small>TYRE WEAR</small>
+                  <h2 id="wearValue">0%</h2>
+                  <div class="wear-bar">
+                  <div id="wearFill"></div>
+                  </div>
+                  <p id="wearCondition">Tyre condition: Optimal</p>
+                </div>
+            </section>
+
+
+            <!-- LOWER DASHBOARD -->
+            <section class="content-grid">
+
+                <!-- TRACK -->
+                <div class="panel track-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <small>LIVE CIRCUIT</small>
+                            <h2>Track Overview</h2>
+                        </div>
+
+                        <span class="live-label">● LIVE</span>
+                    </div>
+
+                    <div class="track">
+                        <svg viewBox="0 0 500 260"
+                             xmlns="http://www.w3.org/2000/svg">
+
+                            <path
+                                d="M80 190
+                                   L110 60
+                                   L220 45
+                                   L280 100
+                                   L410 70
+                                   L440 150
+                                   L350 210
+                                   L220 190
+                                   L170 230
+                                   L80 190"
+                                fill="none"
+                                stroke="#E52B35"
+                                stroke-width="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+
+                            <path
+                                d="M80 190
+                                   L110 60
+                                   L220 45
+                                   L280 100
+                                   L410 70
+                                   L440 150
+                                   L350 210
+                                   L220 190
+                                   L170 230
+                                   L80 190"
+                                fill="none"
+                                stroke="#FFFFFF"
+                                stroke-width="2"
+                                stroke-dasharray="7 8"/>
+
+                        </svg>
+                    </div>
+
+                    <p class="track-caption">
+                        MONACO CIRCUIT · SIMULATED TRACK MAP
+                    </p>
+
+                </div>
+
+
+                <!-- DRIVER -->
+                <div class="panel driver-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <small>TEAM DRIVER</small>
+                            <h2>Driver Information</h2>
+                        </div>
+                    </div>
+
+                    <div class="driver-number">01</div>
+
+                    <h2>FRANZ HERMANN</h2>
+                    <p class="driver-team">VERSTAPPEN RACING</p>
+
+                    <div class="driver-details">
+                        <div>
+                            <small>POSITION</small>
+                            <strong>01</strong>
+                        </div>
+
+                    <div>
+                      <small>GAP TO P2</small>
+                       <strong id="gapValue">+2.450s</strong>
+                       </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTTOM STRATEGY SECTION -->
+            <section class="panel strategy-panel" id="strategy">
+
+                <div class="panel-heading">
+                    <div>
+                        <small>STRATEGY CENTER</small>
+                        <h2>Race Strategy</h2>
+                    </div>
+
+                    <span class="strategy-tag">READY</span>
+                </div>
+
+                <div class="strategy-options">
+
+                <div class="tyre-option" data-tyre="SOFT">
+                 <span class="tyre soft"></span>
+                 <strong>SOFT</strong>
+                <small>High speed · 12%/lap</small>
+                 </div>
+
+                 <div class="tyre-option selected" data-tyre="MEDIUM">
+                 <span class="tyre medium"></span>
+                 <strong>MEDIUM</strong>
+                  <small>Balanced · 8%/lap</small>
+                  </div>
+        </div>
+
+    <div class="tyre-option" data-tyre="HARD">
+        <span class="tyre hard"></span>
+        <strong>HARD</strong>
+        <small>Long lasting · 5%/lap</small>
+    </div>
+
+</div>
+
+               <div class="strategy-comparison">
+    <div class="plan-card" id="oneStopCard">
+        <small>PLAN A · 1-STOP STRATEGY</small>
+        <strong>MEDIUM → HARD (Pit ~Lap 25)</strong>
+        <p id="oneStopStatus">Est. Race Time: 62m 18s · Consistent pace, low pit loss</p>
+    </div>
+
+    <div class="plan-card" id="twoStopCard">
+        <small>PLAN B · 2-STOP STRATEGY</small>
+        <strong>SOFT → MEDIUM → SOFT (Pit ~Lap 16 & 34)</strong>
+        <p id="twoStopStatus">Est. Race Time: 62m 24s · Fast lap pace, +22s extra pit stop</p>
+    </div>
+</div>
+                </div>
+                    <div class="strategy-actions">
+                   <button class="next-lap-button" id="nextLapButton">
+                   NEXT LAP +1
+                    </button>
+
+               
+                </div>
+                <button class="pit-button" id="pitButton">
+                    PIT STOP DECISION →
+                </button>
+
+            </section>
+
+
+            <footer>
+                F1 PIT WALL © 2026 | EDUCATIONAL RACE SIMULATOR
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
